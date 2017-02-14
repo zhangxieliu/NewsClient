@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    tools:context="com.fosu.newsclient.activity.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/layout_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/layout_news"
+            style="@style/MainBottomLayout">
+
+            <ImageButton
+                style="@style/MainBottomImageButton"
+                android:background="@drawable/home_image_btn_selector" />
+
+            <TextView
+                style="@style/MainBottomTextView"
+                android:enabled="false"
+                android:text="新闻" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_news2"
+            style="@style/MainBottomLayout">
+
+            <ImageButton
+                style="@style/MainBottomImageButton"
+                android:background="@drawable/joke_image_btn_selector" />
+
+            <TextView
+                style="@style/MainBottomTextView"
+                android:text="搞笑" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_news3"
+            style="@style/MainBottomLayout">
+
+            <ImageButton
+                style="@style/MainBottomImageButton"
+                android:background="@drawable/weibo_image_btn_selector" />
+
+            <TextView
+                style="@style/MainBottomTextView"
+                android:text="微博精选" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_news4"
+            style="@style/MainBottomLayout">
+
+            <ImageButton
+                style="@style/MainBottomImageButton"
+                android:background="@drawable/weixin_image_btn_selector" />
+
+            <TextView
+                style="@style/MainBottomTextView"
+                android:text="微信精选" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

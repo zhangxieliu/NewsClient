@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.RegisterActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/blue"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/selector_btn_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/img_back"
+            android:text="用户注册"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <LinearLayout style="@style/layout_style">
+
+        <TextView
+            style="@style/text_style"
+            android:text="@string/username" />
+
+        <EditText
+            android:id="@+id/et_username"
+            style="@style/edit_style"
+            android:hint="@string/username_hint"
+            android:maxLength="20"
+            android:paddingLeft="20dp" />
+    </LinearLayout>
+
+    <View style="@style/line" />
+
+    <RelativeLayout style="@style/layout_style">
+
+        <TextView
+            android:id="@+id/tv_password"
+            style="@style/text_style"
+            android:text="@string/password" />
+
+        <EditText
+            android:id="@+id/et_password"
+            style="@style/edit_style"
+            android:layout_toRightOf="@+id/tv_password"
+            android:hint="@string/password_hint"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:paddingLeft="20dp" />
+
+        <Button
+            android:id="@+id/btn_eye"
+            android:layout_width="33dp"
+            android:layout_height="24dp"
+            android:layout_alignRight="@+id/et_password"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/eye_unenable" />
+    </RelativeLayout>
+
+    <View style="@style/line" />
+
+    <LinearLayout style="@style/layout_style">
+
+        <TextView
+            style="@style/text_style"
+            android:text="@string/email" />
+
+        <EditText
+            android:id="@+id/et_email"
+            style="@style/edit_style"
+            android:hint="@string/email_hint"
+            android:inputType="textEmailAddress"
+            android:maxLength="16"
+            android:paddingLeft="20dp" />
+    </LinearLayout>
+
+    <View style="@style/line" />
+
+    <RelativeLayout style="@style/layout_style">
+
+        <TextView
+            android:id="@+id/tv_phone"
+            style="@style/text_style"
+            android:text="@string/phone" />
+
+        <EditText
+            android:id="@+id/et_phone"
+            style="@style/edit_style"
+            android:layout_toRightOf="@+id/tv_phone"
+            android:hint="@string/phone_hint"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:paddingLeft="20dp" />
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignRight="@+id/et_phone"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/smssdk_clear_search"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View style="@style/line" />
+
+    <RelativeLayout style="@style/layout_style">
+
+        <EditText
+            android:id="@+id/et_sms_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btn_sms_code"
+            android:layout_marginLeft="20dp"
+            android:layout_toLeftOf="@+id/btn_sms_code"
+            android:background="@drawable/input_bg_focus"
+            android:hint="请输入验证码"
+            android:inputType="number"
+            android:maxLength="6"
+            android:maxLines="1"
+            android:paddingLeft="20dp" />
+
+        <Button
+            android:id="@+id/btn_sms_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/button_selector"
+            android:enabled="false"
+            android:padding="5dp"
+            android:text="获取短信验证码"
+            android:textColor="@color/text_view_click" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_selector"
+        android:enabled="false"
+        android:text="注册"
+        android:textColor="@color/text_view_click" />
+
+</LinearLayout>

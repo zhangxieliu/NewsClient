@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">NewsClient</string>
+    <string name="login_qq">QQ</string>
+    <string name="login_weixin">微信</string>
+    <string name="login_other">其他方式登录</string>
+    <string name="login">登录</string>
+    <string name="login_question_hint">登录遇到问题</string>
+    <string name="password_hint">请输入密码</string>
+    <string name="password">密　码：</string>
+    <string name="username_hint">请输入用户名</string>
+    <string name="username">用户名：</string>
+    <string name="top_register">注册</string>
+    <string name="email">E-mail：</string>
+    <string name="email_hint">请输入邮箱</string>
+    <string name="phone_hint">请输入手机号码</string>
+    <string name="phone">手机号：</string>
+</resources>

@@ -1,0 +1,79 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
+    defaultConfig {
+        applicationId "com.fosu.newsclient"
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    testCompile 'junit:junit:4.12'
+    //控件注解式框架
+    compile 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    //安卓RxJava框架
+    compile 'io.reactivex:rxandroid:1.2.1'
+    //Retrofit网络请求框架
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'org.ligboy.retrofit2:converter-fastjson-android:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    //网络图片加载控件
+    compile files('libs/android-smart-image-view-1.0.0.jar')
+    //下拉加载和下拉刷新
+    compile 'com.github.userswlwork:pull-to-refresh:1.0.0'
+    //JSON数据解析库
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    //ViewPager指示器
+    compile 'fr.baloomba:viewpagerindicator:2.4.2'
+    //沉浸式状态栏
+    compile 'com.readystatesoftware.systembartint:systembartint:1.0.4'
+    //广告轮播
+    compile 'com.android.support:support-v4:+'
+    compile 'com.squareup.picasso:picasso:2.3.2'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.daimajia.slider:library:1.1.5@aar'
+    //加载动画
+    compile 'com.wang.avi:library:2.1.3'
+    compile 'org.xutils:xutils:3.3.36'
+    //    compile 'tv.danmaku.ijk.media:ijkplayer-java:0.6.3'
+    //    compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.6.3'
+    //    compile 'tv.danmaku.ijk.media:ijkplayer-armv5:0.6.3'
+    //    compile 'tv.danmaku.ijk.media:ijkplayer-arm64:0.6.3'
+    //    compile 'tv.danmaku.ijk.media:ijkplayer-x86:0.6.3'
+    //    compile 'tv.danmaku.ijk.media:ijkplayer-x86_64:0.6.3'
+    //    compile 'tv.danmaku.ijk.media:ijkplayer-exo:0.6.3'
+    //    compile 'com.charonchui.vitamio:vitamio:4.2.2'
+    compile 'com.facebook.fresco:fresco:0.14.1'
+    compile 'com.facebook.fresco:animated-webp:0.12.0'
+    compile 'com.facebook.fresco:webpsupport:0.12.0'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile name: 'SMSSDK-2.1.2', ext: 'aar'
+    compile 'com.mobsandgeeks:android-saripaar:2.0.3'
+    compile 'com.github.wseemann:FFmpegMediaMetadataRetriever:1.0.12'
+}

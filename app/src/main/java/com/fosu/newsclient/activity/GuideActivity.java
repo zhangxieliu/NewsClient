@@ -26,7 +26,6 @@ import butterknife.OnClick;
  * Created by Administrator on 2016/10/12.
  * 引导页面，使用ViewPager实现
  */
-
 public class GuideActivity extends AppCompatActivity {
     @BindView(R.id.viewPager)
     ViewPager viewPager;

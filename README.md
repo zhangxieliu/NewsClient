@@ -14,7 +14,15 @@
 3. 该新闻客户端要界面友好，操作性强，易用性强。所谓易用性就是各种功能不要藏的太深，用户应该很容易找到他们期望进行的各种操作；易学就是需要应用茶品可以通过简单的导航，在线帮助等各种方式保证用户可便捷掌握使用技巧；易用的重点则在让软件熟练使用后应该可以更快的进行各项操作。
 4. 该新闻客户端要切换流畅，响应速度要快。
 # 功能分析 #
-> 新闻客户端是阅读新闻提供便利的软件，用户可以根据分类进行喜欢的内容进行阅读。新闻内容都是请求网络服务器接口获得的，客户端通过解析服务端传递的JSON数据，最终显示到界面上，整个软件开发严格遵循软件工程设计原则和规范，运用软件设计模式开发，介绍系统模块间的耦合。
+
+新闻客户端是阅读新闻提供便利的软件，用户可以根据分类进行喜欢的内容进行阅读。新闻内容都是请求网络服务器接口获得的，客户端通过解析服务端传递的JSON数据，最终显示到界面上，整个软件开发严格遵循软件工程设计原则和规范，运用软件设计模式开发，介绍系统模块间的耦合。
+
+![](https://github.com/zhangxieliu/NewsClient/blob/master/picture/8.jpg)
+
+整体布局
+软件与用户的交互主要是以Activity+Fragment来实现的。Activity是一个Android系统自带的重量级组件，它主要用于与用户界面的交互。它是一个有生命周期的对象，它也是Android四大组件中最常用的一个。Android开发者通过新建一系列Activity的子类，覆写它的onCreate方法来实现一系列的功能。Fragment是一个Android系统轻量级组件，它的使用可以大量释放内存空间，我们可以将Fragment当成是Activity中的模块，这个模块有生命周期和布局，可以单独处理自己的输入。可以在Activity运行的时候动态地加载或移除Fragment。Fragment可以在Activity中被大量复用，实现灵活的布局，改善用户体验。
+用户登录界面，使用第三方Mob短信验证SDK进行手机号码的请求注册验证。用户数据进行本地SQLite数据库保存。实现用户登录信息的保存使用SharedPreferences保存，效果如图：
+
 
 # 项目截图 #
 
@@ -22,9 +30,13 @@
 
 ![](https://github.com/zhangxieliu/NewsClient/blob/master/picture/2.jpg)
 
+# 新闻界面实现Fragment+ViewPagerIndicator进行新闻类别的滑动切换。数据的刷新加载使用GitHub上的pull-to-refresh开源框架进行数据的刷新加载。效果如图： #
 ![](https://github.com/zhangxieliu/NewsClient/blob/master/picture/3.jpg)
 
 ![](https://github.com/zhangxieliu/NewsClient/blob/master/picture/4.jpg)
+
+# 新闻详情页实现WebView进行HTML页面的加载和显示，如图： #
+
 ![](https://github.com/zhangxieliu/NewsClient/blob/master/picture/5.jpg)
 
 ![](https://github.com/zhangxieliu/NewsClient/blob/master/picture/6.jpg)

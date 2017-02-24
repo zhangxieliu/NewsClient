@@ -17,7 +17,7 @@
 
 新闻客户端是阅读新闻提供便利的软件，用户可以根据分类进行喜欢的内容进行阅读。新闻内容都是请求网络服务器接口获得的，客户端通过解析服务端传递的JSON数据，最终显示到界面上，整个软件开发严格遵循软件工程设计原则和规范，运用软件设计模式开发，介绍系统模块间的耦合。
 
-![](https://github.com/zhangxieliu/NewsClient/blob/master/picture/8.jpg)
+![](https://github.com/zhangxieliu/NewsClient/blob/master/picture/8.png)
 
 整体布局
 软件与用户的交互主要是以Activity+Fragment来实现的。Activity是一个Android系统自带的重量级组件，它主要用于与用户界面的交互。它是一个有生命周期的对象，它也是Android四大组件中最常用的一个。Android开发者通过新建一系列Activity的子类，覆写它的onCreate方法来实现一系列的功能。Fragment是一个Android系统轻量级组件，它的使用可以大量释放内存空间，我们可以将Fragment当成是Activity中的模块，这个模块有生命周期和布局，可以单独处理自己的输入。可以在Activity运行的时候动态地加载或移除Fragment。Fragment可以在Activity中被大量复用，实现灵活的布局，改善用户体验。

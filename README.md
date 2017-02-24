@@ -13,6 +13,7 @@
 2. 该新闻客户端要兼容不同品牌、版本和分辨率的Android设备。 
 3. 该新闻客户端要界面友好，操作性强，易用性强。所谓易用性就是各种功能不要藏的太深，用户应该很容易找到他们期望进行的各种操作；易学就是需要应用茶品可以通过简单的导航，在线帮助等各种方式保证用户可便捷掌握使用技巧；易用的重点则在让软件熟练使用后应该可以更快的进行各项操作。
 4. 该新闻客户端要切换流畅，响应速度要快。
+
 # 功能分析 #
 
 新闻客户端是阅读新闻提供便利的软件，用户可以根据分类进行喜欢的内容进行阅读。新闻内容都是请求网络服务器接口获得的，客户端通过解析服务端传递的JSON数据，最终显示到界面上，整个软件开发严格遵循软件工程设计原则和规范，运用软件设计模式开发，介绍系统模块间的耦合。
@@ -30,12 +31,12 @@
 
 ![](https://github.com/zhangxieliu/NewsClient/blob/master/picture/2.jpg)
 
-# 新闻界面实现Fragment+ViewPagerIndicator进行新闻类别的滑动切换。数据的刷新加载使用GitHub上的pull-to-refresh开源框架进行数据的刷新加载。效果如图： #
+新闻界面实现Fragment+ViewPagerIndicator进行新闻类别的滑动切换。数据的刷新加载使用GitHub上的pull-to-refresh开源框架进行数据的刷新加载。效果如图:
 ![](https://github.com/zhangxieliu/NewsClient/blob/master/picture/3.jpg)
 
 ![](https://github.com/zhangxieliu/NewsClient/blob/master/picture/4.jpg)
 
-# 新闻详情页实现WebView进行HTML页面的加载和显示，如图： #
+新闻详情页实现WebView进行HTML页面的加载和显示，如图:
 
 ![](https://github.com/zhangxieliu/NewsClient/blob/master/picture/5.jpg)
 
